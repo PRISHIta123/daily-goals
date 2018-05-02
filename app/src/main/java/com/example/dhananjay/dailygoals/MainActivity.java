@@ -83,9 +83,85 @@ public class MainActivity extends AppCompatActivity {
         welcomeScreen.show(savedInstanceState);
     }
 
+    recyclerView1.addOnItemTouchListener(new RecyclerTouchListener(this,
+                recyclerView1, new ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                //Values are passing to activity & to fragment as well
+
+
+                if(position == 0)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Breakfast.class);
+                    startActivity(intent);
+                }
+
+                if(position == 1)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Study1.class);
+                    startActivity(intent);
+                }
+                if(position == 2)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Lunch.class);
+                    startActivity(intent);
+                }
+                if(position == 3)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Study2.class);
+                    startActivity(intent);
+                }
+                if(position == 4)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Games.class);
+                    startActivity(intent);
+                }
+                if(position == 5)
+                {
+                    Intent intent = new Intent(getApplicationContext(), Dinner.class);
+                    startActivity(intent);
+                }
+            }
+            @Override
+            public void onLongClick(View view, int position) {
+                if(position == 0)
+                {
+                    Toast.makeText(getApplicationContext(), "Breakfast Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                if(position == 1)
+                {
+                    Toast.makeText(getApplicationContext(), "Studies Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if(position == 2)
+                {
+                    Toast.makeText(getApplicationContext(), "Lunch Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if(position == 3)
+                {
+                    Toast.makeText(getApplicationContext(), "Studies Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if(position == 4)
+                {
+                    Toast.makeText(getApplicationContext(), "Games Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if(position == 5)
+                {
+                    Toast.makeText(getApplicationContext(), "Dinner Completed",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        }}};
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         welcomeScreen.onSaveInstanceState(outState);
     }
+
 }

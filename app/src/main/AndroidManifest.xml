@@ -23,6 +23,14 @@
         <activity android:name=".PopupActivity"
             android:theme="@style/AppTheme.CustomTheme"></activity>
         <receiver android:name=".NotificationActivity"></receiver>
+
+        <activity android:name=".Breakfast" />
+        <activity android:name=".Lunch" />
+        <activity android:name=".Study1" />
+        <activity android:name=".Study2" />
+        <activity android:name=".Games" />
+        <activity android:name=".Dinner" />
+        
     </application>
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"></uses-permission>
 </manifest>
