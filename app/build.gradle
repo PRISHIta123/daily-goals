@@ -1,4 +1,3 @@
-
 apply plugin: 'com.android.application'
 
 // change gradle version from 4.1 to 4.4

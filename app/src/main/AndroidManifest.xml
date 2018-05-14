@@ -29,12 +29,14 @@
 
         <receiver android:name=".NotificationActivity" />
 
+
         <activity android:name=".Breakfast" />
         <activity android:name=".Lunch" />
         <activity android:name=".Dinner" />
         <activity android:name=".Games" />
         <activity android:name=".Study1" />
         <activity android:name=".Study2" />
+
         <activity android:name=".Goals_Completed" />
         <activity android:name=".Goals_Missed" />
         <activity android:name=".Achievements"></activity>
